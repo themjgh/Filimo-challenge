@@ -48,8 +48,8 @@ const HomePage: NextPage = () => {
 
     // filter and sort function
     const filterFunction = (movies: Movie[], filters: string[]): Movie[] => {
-      let filteredMovies = movies.filter((movie) => {
-        let fetchedCategories = movie.categories.filter((category) => {
+      let filteredMovies: Movie[] = movies.filter((movie) => {
+        let fetchedCategories= movie.categories.filter((category) => {
           return filters.includes(category.title_en);
         });
         if (fetchedCategories.length !== 0) {
@@ -249,30 +249,6 @@ const HomePage: NextPage = () => {
   );
 };
 
-  // filter and sort function
-  export const filterFunction = (movies: Movie[], filters: string[]): Movie[] => {
-    let filteredMovies = movies.filter((movie) => {
-      let fetchedCategories = movie.categories.filter((category) => {
-        return filters.includes(category.title_en);
-      });
-      if (fetchedCategories.length !== 0) {
-        return true;
-      }
-      return false;
-    });
-    return filteredMovies;
-  };
-  export const sortFunction = (movies: Movie[], sortType: string): Movie[] => {
-    let sortedList = [...movies];
-    sortedList.sort((movie1, movie2) => {
-      return (
-        parseFloat(movie1.rate_avrage) - parseFloat(movie2.rate_avrage)
-      );
-    });
-    if (sortType !== "desc") {
-      sortedList.reverse();
-    }
-    return sortedList;
-  };
+ 
 
 export default HomePage;
