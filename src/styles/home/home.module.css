@@ -1,0 +1,27 @@
+.background {
+  background-image: url("../../../public/statics/pictures/intro-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(12, 12, 12, 0.85); */
+}
+
+.movieListBox {
+  direction: rtl;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: auto;
+  margin-top: 6vh;
+  padding: 24px 24px;
+  background-color: #151515;
+  background: linear-gradient(
+      transparent,
+      #151515,
+      #151515 80%,
+      #151515 90%,
+      rgb(0, 0, 0, 0)
+    )
+    10%;
+}
