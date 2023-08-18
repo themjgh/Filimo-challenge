@@ -15,12 +15,12 @@ const FilmCard: React.FC<{ movie: Movie }> = ({ movie }) => {
     });
     return (
       <div className={styles.hoverDataBox}>
-        <p className={styles.scoreBox}>
+        <p className={styles.scoreBox} data-testid={"figcaption-scoreBox"}>
           <LikeFilled style={{ color: "#E8E8E8", marginLeft: "5px" }} />
           {`${e2p(movie.avg_rate_label)}`}
         </p>
-        <p className={styles.figcaptionMovieTitle}>{`${movie.movie_title}`}</p>
-        <p className={styles.figcaptionGenre}>{`${genreList.join(" - ")}`}</p>
+        <p className={styles.figcaptionMovieTitle} data-testid={"figcaption-movie-title"}>{`${movie.movie_title}`}</p>
+        <p className={styles.figcaptionGenre} data-testid={"figcaption-genre"}>{`${genreList.join(" - ")}`}</p>
       </div>
     );
   };
@@ -38,9 +38,10 @@ const FilmCard: React.FC<{ movie: Movie }> = ({ movie }) => {
               className={styles.coverImage}
               about={movie.movie_title_en}
               priority
+              data-testid={"film-poster"}
             />
-            <figcaption className={styles.figcaption}>
-              <HoverData movie={movie} />
+            <figcaption data-testid={"figcaption"} className={styles.figcaption}>
+              <HoverData data-testid={"hover-data"} movie={movie} />
             </figcaption>
           </figure>
         </div>
@@ -50,10 +51,10 @@ const FilmCard: React.FC<{ movie: Movie }> = ({ movie }) => {
           align={"middle"}
         >
           <Col>
-            <p className={styles.title}>{movie.movie_title}</p>
+            <p data-testid={"movie-title"} className={styles.title}>{movie.movie_title}</p>
           </Col>
           <Col>
-            <p className={styles.scoreBox}>{`امتیاز ${e2p(
+            <p data-testid={"score"} className={styles.scoreBox}>{`امتیاز ${e2p(
               movie.rate_avrage
             )}`}</p>
           </Col>

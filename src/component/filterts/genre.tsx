@@ -44,12 +44,13 @@ const GenreFilter: React.FC = () => {
         return (
           <>
             <div id="genreFilter" className={styles.optionsBox}>
-              <Checkbox.Group onChange={onChange} defaultValue={genreFilters}>
+              <Checkbox.Group data-testid={"checkBox-group"} onChange={onChange} defaultValue={genreFilters}>
                 <Row justify={"space-around"}>
                   <Col lg={12} md={12} sm={24} xs={24}>
                     <Checkbox
                       value={"drama"}
                       style={{ color: "white", margin: "10px" }}
+                      data-testid={"drama-option"}
                     >
                       <Text className={styles.optionText}>{"درام"}</Text>
                     </Checkbox>
@@ -58,6 +59,8 @@ const GenreFilter: React.FC = () => {
                     <Checkbox
                       value={"comedy"}
                       style={{ color: "white", margin: "10px" }}
+                      data-testid={"comedy-option"}
+
                     >
                       <Text className={styles.optionText}>{"کمدی"}</Text>
                     </Checkbox>
@@ -66,6 +69,8 @@ const GenreFilter: React.FC = () => {
                     <Checkbox
                       value={"sci-fi"}
                       style={{ color: "white", margin: "10px" }}
+                      data-testid={"scifi-option"}
+
                     >
                       <Text className={styles.optionText}>{"علمی تخیلی"}</Text>
                     </Checkbox>
@@ -74,6 +79,7 @@ const GenreFilter: React.FC = () => {
                     <Checkbox
                       value={"action"}
                       style={{ color: "white", margin: "10px" }}
+                      data-testid={"action-option"}
                     >
                       <Text className={styles.optionText}>{"اکشن"}</Text>
                     </Checkbox>
@@ -86,7 +92,7 @@ const GenreFilter: React.FC = () => {
       }}
       overlayClassName={styles.optionsBox}
     >
-      <Button className={styles.dropdown}>
+      <Button className={styles.dropdown} data-testid={"genre-button"} >
         <Row justify={"space-around"}>
           <Col>
             <Text className={styles.title}>{"ژانر"}</Text>

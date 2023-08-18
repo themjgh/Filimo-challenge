@@ -44,16 +44,16 @@ interface Serial {
 
 interface Movie {
   type: string;
-  id: number;
+  id: string;
   link_type: string;
   link_key: string;
   theme: string;
   output_type: string;
-  movie_id: number;
+  movie_id: string;
   uid: string;
   movie_title: string;
   movie_title_en: string;
-  tag_id: number;
+  tag_id: string;
   serial: Serial;
   watermark: boolean;
   HD: boolean;

@@ -43,6 +43,8 @@ const IntroPage = () => {
             src={"/statics/pictures/brand.svg"}
             width={284}
             height={97}
+            data-testid={"filimo-brand"}
+            priority
           ></Image>
         </Col>
       </Row>
@@ -54,6 +56,8 @@ const IntroPage = () => {
             width={120}
             height={48}
             style={{ marginRight: 24 }}
+            data-testid={"left-stars"}
+            
           ></Image>
         </Col>
         <Col style={{ textAlign: "center" }}>
@@ -68,14 +72,15 @@ const IntroPage = () => {
             width={120}
             height={48}
             style={{ marginLeft: 24 }}
-            priority
+            data-testid={"right-stars"}
+
           ></Image>
         </Col>
       </Row>
       <Row justify={"center"} style={{ marginTop: "6vh" }}>
         <Col>
           <Link href="/home">
-            <Button icon={<LeftArrowIcon />} className={styles.startTourButton}>
+            <Button data-testid={"start-tour-button"} icon={<LeftArrowIcon />} className={styles.startTourButton} >
               <Text className={styles.startTourButtonText}>
                 {"گشتی در فیلیمو"}
               </Text>

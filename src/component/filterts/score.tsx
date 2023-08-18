@@ -56,6 +56,7 @@ const ScoreFilter: React.FC = () => {
                     style={{ color: "white", margin: "10px" }}
                     onChange={handleChange}
                     checked={checker("asc")}
+                    data-testid={"asc-sort"}
                   >
                     <Text className={styles.optionText}>
                       {"بالاترین امتیاز"}
@@ -68,6 +69,8 @@ const ScoreFilter: React.FC = () => {
                     style={{ color: "white", margin: "10px" }}
                     onChange={handleChange}
                     checked={checker("desc")}
+                    data-testid={"desc-sort"}
+
                   >
                     <Text className={styles.optionText}>
                       {"پایین ترین امتیاز"}
@@ -81,7 +84,7 @@ const ScoreFilter: React.FC = () => {
       }}
       overlayClassName={styles.optionsBox}
     >
-      <Button className={styles.dropdown}>
+      <Button className={styles.dropdown} data-testid={"score-sort-button"}>
         <Row justify={"space-around"}>
           <Col>
             <Text className={styles.title}>{"امتیاز"}</Text>

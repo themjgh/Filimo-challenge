@@ -28,9 +28,9 @@ const HomePage: NextPage = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const makeFirstFilter = (moviesList: Movie[]) => {
-    let genreFilterList: string[] = [];
-    const sortType = searchParams.getAll("sortType");
-    let sortOrder = "default";
+  let genreFilterList: string[] = [];
+  const sortType = searchParams.getAll("sortType");
+  let sortOrder = "default";
 
     if (searchParams.getAll("filters").length !== 0) {
       genreFilterList = searchParams.getAll("filters")[0].split(",");
@@ -85,6 +85,9 @@ const HomePage: NextPage = () => {
       })
     );
   };
+
+
+  
   // fetch data from movies api
   useEffect(() => {
     const getServerSideProps = () => {
@@ -245,5 +248,31 @@ const HomePage: NextPage = () => {
     </>
   );
 };
+
+  // filter and sort function
+  export const filterFunction = (movies: Movie[], filters: string[]): Movie[] => {
+    let filteredMovies = movies.filter((movie) => {
+      let fetchedCategories = movie.categories.filter((category) => {
+        return filters.includes(category.title_en);
+      });
+      if (fetchedCategories.length !== 0) {
+        return true;
+      }
+      return false;
+    });
+    return filteredMovies;
+  };
+  export const sortFunction = (movies: Movie[], sortType: string): Movie[] => {
+    let sortedList = [...movies];
+    sortedList.sort((movie1, movie2) => {
+      return (
+        parseFloat(movie1.rate_avrage) - parseFloat(movie2.rate_avrage)
+      );
+    });
+    if (sortType !== "desc") {
+      sortedList.reverse();
+    }
+    return sortedList;
+  };
 
 export default HomePage;
