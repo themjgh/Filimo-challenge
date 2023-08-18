@@ -1,0 +1,24 @@
+<svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1202823">
+<path id="Star 7" opacity="0.2" d="M12 12L13.7055 22.2945L24 24L13.7055 25.7055L12 36L10.2945 25.7055L0 24L10.2945 22.2945L12 12Z" fill="url(#paint0_radial_6_21026)"/>
+<path id="Star 6" opacity="0.6" d="M48 6L50.5583 21.4417L66 24L50.5583 26.5583L48 42L45.4417 26.5583L30 24L45.4417 21.4417L48 6Z" fill="url(#paint1_radial_6_21026)"/>
+<path id="Star 5" d="M96 0L99.4111 20.5889L120 24L99.4111 27.4111L96 48L92.5889 27.4111L72 24L92.5889 20.5889L96 0Z" fill="url(#paint2_radial_6_21026)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_6_21026" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.28227 13.331) rotate(66.8123) scale(24.5521 52.385)">
+<stop stop-color="#FDC13B"/>
+<stop offset="0.66" stop-color="#F89F3E"/>
+<stop offset="1" stop-color="#F4843F"/>
+</radialGradient>
+<radialGradient id="paint1_radial_6_21026" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.4234 7.99654) rotate(66.8123) scale(36.8281 78.5775)">
+<stop stop-color="#FDC13B"/>
+<stop offset="0.66" stop-color="#F89F3E"/>
+<stop offset="1" stop-color="#F4843F"/>
+</radialGradient>
+<radialGradient id="paint2_radial_6_21026" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80.5645 2.66206) rotate(66.8123) scale(49.1041 104.77)">
+<stop stop-color="#FDC13B"/>
+<stop offset="0.66" stop-color="#F89F3E"/>
+<stop offset="1" stop-color="#F4843F"/>
+</radialGradient>
+</defs>
+</svg>

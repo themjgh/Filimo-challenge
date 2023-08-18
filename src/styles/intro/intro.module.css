@@ -1,0 +1,49 @@
+.background {
+  background: rgba(12, 12, 12, 0.85);
+  background-image: url("../../../public/statics/pictures/backgroung.jpg");
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.brand {
+  fill: var(--natural-colors-dark-primary-color-dark, #e8e8e8);
+}
+
+.title {
+  color: var(--natural-colors-dark-secondary-color-dark, #a1a1a1);
+  text-align: center;
+  font-family: "IRANSansWeb";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  margin: 0px auto;
+}
+
+.startTourButton {
+  display: inline-flex;
+  padding: 24px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 48px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    linear-gradient(270deg, #f4843f 0%, #f89f3e 53.28%, #fdc13b 100%);
+}
+
+.startTourButtonText {
+  color: var(--natural-colors-light-primary-color-light, #1a1a1a);
+  text-align: center;
+  font-family: "IRANSansWeb";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
