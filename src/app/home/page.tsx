@@ -28,9 +28,9 @@ const HomePage: NextPage = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const makeFirstFilter = (moviesList: Movie[]) => {
-  let genreFilterList: string[] = [];
-  const sortType = searchParams.getAll("sortType");
-  let sortOrder = "default";
+    let genreFilterList: string[] = [];
+    const sortType = searchParams.getAll("sortType");
+    let sortOrder = "default";
 
     if (searchParams.getAll("filters").length !== 0) {
       genreFilterList = searchParams.getAll("filters")[0].split(",");
@@ -49,7 +49,7 @@ const HomePage: NextPage = () => {
     // filter and sort function
     const filterFunction = (movies: Movie[], filters: string[]): Movie[] => {
       let filteredMovies: Movie[] = movies.filter((movie) => {
-        let fetchedCategories= movie.categories.filter((category) => {
+        let fetchedCategories = movie.categories.filter((category) => {
           return filters.includes(category.title_en);
         });
         if (fetchedCategories.length !== 0) {
@@ -86,12 +86,10 @@ const HomePage: NextPage = () => {
     );
   };
 
-
-  
   // fetch data from movies api
   useEffect(() => {
     const getServerSideProps = () => {
-      fetch("http://localhost:3000/api/movies").then((res) => {
+      fetch(`/api/movies`).then((res) => {
         res.json().then((movieList: Movie[]) => {
           dispatch(setRequestResult({ requestResult: movieList }));
           dispatch(setMovieList({ movieList: movieList }));
@@ -248,7 +246,5 @@ const HomePage: NextPage = () => {
     </>
   );
 };
-
- 
 
 export default HomePage;
