@@ -37,7 +37,7 @@ const IntroPage = () => {
   return (
     <>
       <Row justify={"center"} style={{ marginTop: "33.3vh" }}>
-        <Col>
+        <Col style={{ textAlign: "center" }}>
           <Image
             alt="filimo-brand"
             src={"/statics/pictures/brand.svg"}
@@ -49,7 +49,7 @@ const IntroPage = () => {
         </Col>
       </Row>
       <Row justify={"center"} style={{ marginTop: "6vh" }}>
-        <Col>
+        <Col style={{ textAlign: "center" }}>
           <Image
             alt="three-stars"
             src={"/statics/pictures/left-stars.svg"}
@@ -57,13 +57,12 @@ const IntroPage = () => {
             height={48}
             style={{ marginRight: 24 }}
             data-testid={"left-stars"}
-            
           ></Image>
         </Col>
         <Col style={{ textAlign: "center" }}>
           <Text className={styles.title}>{introTitle}</Text>
         </Col>
-        <Col>
+        <Col style={{ textAlign: "center" }}>
           <Image
             about="back ground movies"
             draggable={false}
@@ -73,14 +72,17 @@ const IntroPage = () => {
             height={48}
             style={{ marginLeft: 24 }}
             data-testid={"right-stars"}
-
           ></Image>
         </Col>
       </Row>
       <Row justify={"center"} style={{ marginTop: "6vh" }}>
-        <Col>
+        <Col style={{ textAlign: "center" }}>
           <Link href="/home">
-            <Button data-testid={"start-tour-button"} icon={<LeftArrowIcon />} className={styles.startTourButton} >
+            <Button
+              data-testid={"start-tour-button"}
+              icon={<LeftArrowIcon />}
+              className={styles.startTourButton}
+            >
               <Text className={styles.startTourButtonText}>
                 {"گشتی در فیلیمو"}
               </Text>
